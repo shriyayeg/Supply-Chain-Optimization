@@ -1,0 +1,56 @@
+# Distribution Network Optimization for Marico LTD
+## 1. Introduction
+Marico Ltd. is a fast-moving consumer goods (FMCG) company with operations in India and 25 other countries across Asia and Africa. The company specializes in products such as value-added hair oils and edible oil, which account for over 90% of its revenue. However, Marico faces challenges in its distribution network, including high inventory levels and low service levels across its 25 warehouses in India.
+
+### Objectives:
+The goal of this project is to analyze Marico's distribution network and recommend optimization strategies to reduce costs while maintaining or improving service levels. Techniques such as Mixed Integer Linear Programming (MILP) and Network Flow Models were used to develop the optimized solution.
+
+---
+
+## 2. Problem Statement
+Marico's current distribution network suffers from several inefficiencies:
+- High inventory levels leading to increased holding costs.
+- Low service levels, even with high inventory.
+- Issues with forecasting accuracy and inefficient warehouse management.
+- High transportation costs due to suboptimal routing.
+
+---
+
+## 3. Objective Function & Constraints
+The goal is to minimize total costs, which include primary freight costs, secondary freight costs, and fixed costs. The optimization model incorporates several key constraints:
+- **Capacity constraints** ensure that goods transported do not exceed warehouse capacity.
+- **Demand constraints** ensure that distribution meets customer demand.
+- **Distance constraints** ensure timely deliveries, with a maximum distance of 500 km for 2-day delivery.
+- **Flow conservation constraints** ensure balance between the inflow and outflow of goods.
+
+---
+
+## 4. Optimization Approaches
+### Data Preparation:
+The data used includes warehouse, plant, and distributor locations. Zone centroids were calculated for warehouse placement.
+
+### Model:
+- **Mixed Integer Linear Programming (MILP)** was used to determine the number of warehouses to operate and their locations, balancing costs and service levels.
+- **Network Flow Models** were used to optimize the flow of goods from plants to warehouses and from warehouses to distributors, reducing transportation costs.
+
+---
+
+## 5. Conclusion
+The analysis showed that operating 22 strategically located warehouses is the most cost-effective solution. This network minimized freight costs while meeting service level requirements. The optimized network reduced total freight cost to ₹5,702,969.10.
+
+### Key Insights:
+- Maintaining fewer warehouses, while optimizing routes, helps control both operating and transportation costs.
+- Opening additional warehouses would incur more costs than benefits, given the marginal improvements in service levels.
+
+---
+
+## 6. Discussion
+Opening more warehouses could slightly improve service levels, but the increased costs of operation, shipping, and management outweigh these benefits. Further refinement of the model, including capacity constraints and plant production limits, should be considered in future optimizations.
+
+---
+
+## 7. Appendix
+- **Data:** Location details for plants, warehouses, and distributors.
+- **Optimization Code:** Code implementation for objective setup and constraints.
+
+
